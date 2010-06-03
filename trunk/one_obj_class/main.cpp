@@ -7,6 +7,7 @@ int main(int /*argc*/, char **/*argv[]*/)
 {
     OneObj w;
     OneObj b;
+    OneObj d;
     OneObj c;
     return 0;
 }
