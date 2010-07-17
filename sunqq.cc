@@ -41,7 +41,7 @@ int main()
 		// 编译器会优化,所以 q 和 e 指向同一个地址
 
 		// malloc分配的放置在堆中
-
+		
 		printf("func() address is 0x%x\n", func); 
 		printf("main() address is 0x%x\n", main); 
 		printf("a address is 0x%x\n", &a);
