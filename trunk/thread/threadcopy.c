@@ -78,14 +78,11 @@ int main(int argc, char *argv[])
 	persize = length/THRD_NUM + 1;
 	printf("persize = %d\n", persize);
 
+
 	for (count = 0; count < THRD_NUM; count++)
 	{
 		src_arr[count] = src;
 		des_arr[count] = des;
-	}
-
-	for (count = 0; count < THRD_NUM; count++)
-	{
 		ptr = (Copy_param)malloc(sizeof(struct copy_param));
 		ptr->src = src_arr[count];
 		ptr->des = des_arr[count];
