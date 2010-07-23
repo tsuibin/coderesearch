@@ -1,0 +1,2 @@
+create table weblink(id integer primary key,domain text,page text,fromdomain text,status integer);
+insert into weblink (domain,page,fromdomain,status) values ('www.gnu.org','/','www.akaedu.org','0');
