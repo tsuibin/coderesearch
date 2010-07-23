@@ -269,12 +269,12 @@ char * search_one_email (char *data)
 	if (!ret)
 	     return NULL;
 
-	if (use_db){
+	/*if (use_db){
 		char email[200];
 		sprintf (email,"%s@%s",one_email.name,one_email.domain);	
         	insert_email(email,use_page,use_domain);
-	}
-	printf("name: %s@%s\n",one_email.name,one_email.domain);	
+	}*/
+	printf("name: %s@%s\n",one_email.name,one_email.domain); 
 }
 
 char * search_email(char *data)
@@ -295,5 +295,14 @@ char * search_email(char *data)
 
 }
 
+int main(void)
+{
+	char * email1 = "mailto:tsuibin1@akaedu.org";
+	char * email2 = "mailto :tsuibin2@akaedu.org";
+	char * email3 = "mailto : tsuibin3@akaedu.org";
 
+	printf("email : %s \n", search_email(email1));
+	printf("email : %s \n", search_email(email2));
+	printf("email : %s \n", search_email(email3));
+}
 

@@ -102,12 +102,11 @@ struct parse_result *  get_one_link (char *data)
 
 	if (c != '<')
 		return NULL;
-
 	data = is_string (data,"<a");
-
+	
 	if (data == NULL)
 		return NULL;
-	
+
 	data = is_string(data,"href");
 	
 	if (data == NULL)
