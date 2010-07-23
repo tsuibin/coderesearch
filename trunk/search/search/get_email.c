@@ -137,12 +137,18 @@ struct parse_result *  get_one_link (char *data)
 		printf ("malloc %d bytes error!\n",sizeof(struct parse_result));
 		return NULL;
 	}	
+	
+	if (get_address(data) == NULL)
+		return NULL;
+	
+	one_link->data = get_address(data);
+	one_link->ret = 1;
 
-	if (data != NULL)
+	/*if (data != NULL)
 	      one_link->data = get_address(data);
 
 	one_link->ret = 1;
-	
+	*/	
 
 	return one_link;
 }
