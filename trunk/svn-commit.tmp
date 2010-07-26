@@ -1,0 +1,9 @@
+
+--This line, and those below, will be ignored--
+
+A    linkedList
+A    linkedList/dlink.c
+A    linkedList/node.c
+A    memory
+AM   memory/a.out
+A    memory/malloc.c
