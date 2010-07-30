@@ -8,7 +8,7 @@
 
 #define THRD_NUM	2
 volatile int persize;
-
+/*
 
 typedef struct copy_param
 {
@@ -106,3 +106,4 @@ int main(int argc, char *argv[])
 	fclose(des);
 	return 0;
 }
+*/

@@ -9,22 +9,22 @@ class Fruit{
 		cout << "create!" << endl;
 	}
 
-
-	private:
+	int operator+(Fruit &f);
 	int weight;
 };
 
 int Fruit::operator+(Fruit &f)
 {
-	return weight+f.weight;
+	return this->weight+f.weight;
 }
 
 int main(int argc , char *argv[])	
 {
 	Fruit aaa;
+	Fruit bbb;
 	aaa.weight = 10;
 
-	(aaa + bbb) 
+	aaa.weight = (aaa + bbb); 
 	cout << aaa.weight << endl;
 	return 0;
 }

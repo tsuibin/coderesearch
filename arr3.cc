@@ -1,6 +1,6 @@
 #include <iostream>	
 using namespace std;	
-int [] func()
+int * func()
 {
    int a[5]= {2,5};
    return a;
