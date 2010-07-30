@@ -1,11 +1,17 @@
 /*
-
+DDL(Data Definition Language)
 create table student(id integer primary key,name text,grade integer,note text);
+
+alter table student add info text;
+alter table student rename to info;
+alter table info rename to student;
+
+drop table student;
 
 .tables
 
 .schema student
-
+DML(Data Manipulation Language)
 select * from student;
 delete from student where id =1 or name='abc';
 update student set age=22,name='susan' where name='abc';
@@ -32,7 +38,11 @@ int rscallback(void *p,int argc, char **argv, char**argvv)
 	*(int *)p = 0;
 	for ( i = 0; i < argc; i++ )
 	{
+<<<<<<< .mine
+		printf(" %s = %s ", argvv[i], argv[i] ? argv[i] : "NULL" ); 
+=======
 		printf("%s = %s", argvv[i], argv[i] ? argv[i] : "NULL" );
+>>>>>>> .r40
 	}
 	putchar('\n');
 	
@@ -52,7 +62,7 @@ int main(int argc, char *argv[])
 		fputs("\n",stderr);
 		exit(1);
 	}
-	ret = sqlite3_exec(db,"select * from student;", rscallback, &empty,&err);
+	ret = sqlite3_exec(db, "select * from student;", rscallback, &empty,&err);
 	if (ret != SQLITE_OK)
 	{
 		fputs(err,stderr);
