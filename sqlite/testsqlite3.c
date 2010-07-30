@@ -18,6 +18,8 @@ int sqlite3_exec(sqlite3 *db,const char *zSql,sqlite_callback xCallback,void *pA
 
 if zSql is not select ,not call callback function
 
+gcc testsqlite3.c -lsqlite3
+
 */
 
 #include <stdio.h> 
@@ -30,7 +32,7 @@ int rscallback(void *p,int argc, char **argv, char**argvv)
 	*(int *)p = 0;
 	for ( i = 0; i < argc; i++ )
 	{
-		printf("$s = %s", argvv[i], argv[i] ? argv[i] : "NULL" ); 
+		printf("%s = %s", argvv[i], argv[i] ? argv[i] : "NULL" );
 	}
 	putchar('\n');
 	
@@ -64,6 +66,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	sqlite3_close(db);
+
 	return 0;
 }
 
