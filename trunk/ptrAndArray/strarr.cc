@@ -1,5 +1,8 @@
 #include <iostream>	
+
 using namespace std;
+
 int main(int argc,char* argv[]){ 
-	char *a[];
+	char *a;
+	return 0;
 }

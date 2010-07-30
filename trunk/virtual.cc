@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include <string>
+#include <stdlib.h> 
 /*
    class Animal{
    string name;
