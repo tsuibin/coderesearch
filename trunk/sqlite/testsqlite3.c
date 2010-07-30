@@ -38,11 +38,7 @@ int rscallback(void *p,int argc, char **argv, char**argvv)
 	*(int *)p = 0;
 	for ( i = 0; i < argc; i++ )
 	{
-<<<<<<< .mine
 		printf(" %s = %s ", argvv[i], argv[i] ? argv[i] : "NULL" ); 
-=======
-		printf("%s = %s", argvv[i], argv[i] ? argv[i] : "NULL" );
->>>>>>> .r40
 	}
 	putchar('\n');
 	
