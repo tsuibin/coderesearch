@@ -35,7 +35,7 @@ gcc testsqlite3.c -lsqlite3
 int rscallback(void *p,int argc, char **argv, char**argvv)
 {
 	int i;
-	*(int *)p = 0;
+	*(int *)p = 0; //this p poniter == &empty
 	for ( i = 0; i < argc; i++ )
 	{
 		printf(" %s = %s ", argvv[i], argv[i] ? argv[i] : "NULL" ); 
@@ -71,9 +71,8 @@ int main(int argc, char *argv[])
 		fputs("table student is empty\n",stderr);
 		exit(1);
 	}
+
 	sqlite3_close(db);
 
 	return 0;
 }
-
-
