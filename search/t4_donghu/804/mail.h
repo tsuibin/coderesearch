@@ -8,6 +8,7 @@ extern sqlite3 *db;
 extern char *err;
 extern int ret;
 extern int empty;
+
 char * str_searc(const char *, char);
 char * sear_start(const char *);
 char * sear_end(const char *);

@@ -2,18 +2,13 @@
 #include <stdlib.h>
 #include "mail.h"
 
-	extern int ret;
-	extern int empty;
-	extern char *err;
-
+int ret = 0;
+int empty =1;
+char *err = 0;
+sqlite3 *db;
 
 void create_table(void)
 {
-	extern int ret;
-	extern int empty;
-	extern char *err;
-	extern sqlite3 *db;
-
 	ret = sqlite3_open("./mail.db", &db);
 	if (ret != SQLITE_OK)
 	{
@@ -25,11 +20,6 @@ void create_table(void)
 
 void insert_table(int id, char * mail)
 {	
-	extern int ret;
-	extern int empty;
-	extern char *err;
-	extern sqlite3 *db;
-
 	char *sql = sqlite3_mprintf("insert into MAIL values(%d,'%s');",id,mail);
 	ret = sqlite3_exec(db, sql, NULL, &empty, &err);
 	sqlite3_free(sql);
@@ -44,11 +34,6 @@ void insert_table(int id, char * mail)
 
 void delete_table(int id)
 {
-	extern int ret;
-	extern int empty;
-	extern char *err;
-	extern sqlite3 *db;
-
 	char *sql = sqlite3_mprintf("delete from MAIL where ID = %d;",id);
 	ret = sqlite3_exec(db, sql, NULL, &empty, &err);
 	sqlite3_free(sql);
@@ -63,11 +48,6 @@ void delete_table(int id)
 
 void update_table(int id, char * mail)
 {	
-	extern int ret;
-	extern int empty;
-	extern char *err;
-	extern sqlite3 *db;
-
 	char *sql = sqlite3_mprintf("update MAIL set MAIL = '%s' where ID = %d;", mail, id);
 	ret = sqlite3_exec(db, sql, NULL, &empty, &err);
 	sqlite3_free(sql);
@@ -82,11 +62,6 @@ void update_table(int id, char * mail)
 
 void select_table(void)
 {	
-	extern int ret;
-	extern int empty;
-	extern char *err;
-	extern sqlite3 *db;
-
 	ret = sqlite3_exec(db, "select * from MAIL;", rscallback, &empty, &err);
 	if (ret != SQLITE_OK)
 	{
