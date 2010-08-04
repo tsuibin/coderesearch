@@ -9,10 +9,11 @@
 #include <sys/mman.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
-//步骤：1 初始化显示
-////2 初始化鼠标
-//3 读取移动的数据，并且画点
-//循环
+//1 init view
+//2 init mouse
+//3 read data，draw point
+//4 while
+//
 typedef struct point{
 	int x;
 	int y;
@@ -22,7 +23,7 @@ typedef struct point{
 static int w,h,bpp;
 static int cx,cy;
 static struct fb_var_screeninfo fb_var;
-static unsigned short *fb_mem;//framebuffer设置的为8位
+static unsigned short *fb_mem;	//framebuffer设置的为8位
 static int fb ,fd;
 
 int	init_fb (void)
@@ -38,10 +39,10 @@ int	init_fb (void)
 		return -1;
 	}
 	//出错处理
-	ioctl (fb,FBIOGET_VSCREENINFO,&fb_var);//获取设备分辨率，宏在fb.h中/usr/
-	w	=fb_var.xres;
-	h	=fb_var.yres;
-	bpp	=fb_var.bits_per_pixel;//颜色位:位，每像素
+	ioctl (fb,FBIOGET_VSCREENINFO,&fb_var); //get device 分辨率，宏在fb.h中/usr/
+	w	= fb_var.xres;
+	h	= fb_var.yres;
+	bpp	= fb_var.bits_per_pixel;//颜色位:位，每像素
 
 	printf("Framebuffer : %d x %d y - %d bpp\n",w,h,bpp);
 
@@ -54,13 +55,13 @@ int	init_fb (void)
 }
 
 
-//画点函数
+//draw point
 void fb_point (int x,int y,short color)
 {
 	fb_mem[y*w+x]=color;
 }
 
-//初始化鼠标
+//mouse operstion
 int init_mouse(void)
 {
 	fd=open("/dev/input/mice",O_RDONLY);
@@ -85,27 +86,31 @@ int read_mouse(int fd)
 
 	dx = buf[1]-((buf[0]&0x10)?256:0);
 	dy = -buf[2]+((buf[0]&0x20)?256:0);
-
 	//printf ("cx = %d, cy = %d,dx = %d,dy = %d\n",cx,cy,dx,dy);
 	cx += dx;
 	cy += dy;	
 	//printf ("cx = %d, cy = %d,dx = %d,dy = %d\n",cx,cy,dx,dy);
 
 	if (cx < 0)
+	{
 		cx = 0;
+	}
 	if (cx > w)
+	{
 		cx = w;
-
+	}
 	if (cy < 0)
+	{
 		cy = 0;
+	}
 	if (cy > h)
+	{
 		cy = h;
+	}
 	if (buf[0]&0x1)
 	{
-
 		return 0;	
 	}
-
 }
 
 void fb_circle(POINT center, int radius, short color)
@@ -139,10 +144,13 @@ int  main  (void)
 	int ret;
 	int ret1;	
 	int i;
-	fb=open("/dev/fb0",O_RDWR);
-	ret=init_fb();
+
+	fb = open("/dev/fb0",O_RDWR);
+	ret = init_fb();
 	if (ret < -1)
+	{
 		return -1;
+	}
 	ret = init_mouse();
 	while(1)
 	{
