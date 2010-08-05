@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h> // link with -lm
+#include <math.h> // gcc link with -lm
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -58,6 +58,7 @@ int	init_fb (void)
 //draw point
 void fb_point (int x,int y,short color)
 {
+//	printf("%d\n",color); 
 	fb_mem[y*w+x]=color;
 }
 
