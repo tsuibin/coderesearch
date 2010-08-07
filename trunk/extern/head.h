@@ -4,5 +4,7 @@
 #include <stdlib.h> 
 
 extern int i;
+extern static int j;
+
 
 #endif

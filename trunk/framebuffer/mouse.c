@@ -167,9 +167,9 @@ int  main  (void)
 		//			fb_point(cx,cy,0XF800);
 		//			fb_point(cx,cy+1,0XF800);
 
-		POINT center = { 600, 500};
-		int radius = 100;
-		fb_circle(center, radius, 0xF800);
+		//POINT center = { 600, 500};
+		//int radius = 100;
+		//fb_circle(center, radius, 0xF800);
 
 	}
 	return  0;
