@@ -20,7 +20,7 @@ void create_table(void)
 
 void insert_table(int id, char * mail)
 {	
-	char *sql = sqlite3_mprintf("insert into MAIL values(%d,'%s');",id,mail);
+	char *sql = sqlite3_mprintf("insert into MAIL(MAIL) values('%s');",mail);
 	ret = sqlite3_exec(db, sql, NULL, &empty, &err);
 	sqlite3_free(sql);
 	if (ret != SQLITE_OK)
