@@ -42,6 +42,7 @@ int rscallback(void *p,int argc, char **argv, char**argvv)
 {
 	int i;
 	*(int *)p = 0; //this p poniter == &empty
+	printf("here!\n"); 
 	for ( i = 0; i < argc; i++ )
 	{
 		printf(" %s = %s ", argvv[i], argv[i] ? argv[i] : "NULL" ); 
