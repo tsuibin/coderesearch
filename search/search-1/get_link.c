@@ -89,7 +89,8 @@ char * get_address (char * data)
 		return NULL;
 	}
 	
-	memcpy(newdata,data,i);
+	//memcpy(newdata,data,i);
+	memmove(newdata,data,i);
 	
 	return newdata;
 }
