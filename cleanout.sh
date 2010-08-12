@@ -1,4 +1,6 @@
 #find . -name "a.out" |xargs rm -f
 #find . -name "a.out" |xargs ls -lh
-find -name a.out -exec ls -lh '{}'
-#find -name a.out -exec rm -v '{}'
+#find -name a.out -exec ls -lh '{}'
+find -name a.out -exec rm -v '{}'
+svn add ./*
+svn commit
