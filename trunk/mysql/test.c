@@ -34,8 +34,6 @@ int main(int argc, char *argv[])
 
 	conn_ptr = connect_database(conn_ptr);
 	
-	//conn_ptr = mysql_real_connect(conn_ptr, DB_HOSTNAME , DB_USERNAME, DB_PASSWORD, DB_DBNAME, DB_PORT, /*unix socket name*/ NULL, /*flag*/ 0);
-	
 	if (conn_ptr)
 	{
 		printf("Connection success\n"); 
