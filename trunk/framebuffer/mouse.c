@@ -50,6 +50,9 @@ int	init_fb (void)
 
 	cx = w/2;
 	cy = h/2;
+//	cx = w;
+//	cy = h;
+
 
 	return 0;
 }
@@ -59,7 +62,12 @@ int	init_fb (void)
 void fb_point (int x,int y,short color)
 {
 //	printf("%d\n",color); 
-	fb_mem[y*w+x]=color;
+	//fb_mem[y*w+x]=color;
+	int i = 1680*1050;
+	for (;i > 0;i--)
+	{
+		fb_mem[i]=color;
+	}
 }
 
 //mouse operstion
@@ -90,7 +98,7 @@ int read_mouse(int fd)
 	//printf ("cx = %d, cy = %d,dx = %d,dy = %d\n",cx,cy,dx,dy);
 	cx += dx;
 	cy += dy;	
-	//printf ("cx = %d, cy = %d,dx = %d,dy = %d\n",cx,cy,dx,dy);
+	printf ("cx = %d, cy = %d,dx = %d,dy = %d\n",cx,cy,dx,dy);
 
 	if (cx < 0)
 	{
@@ -160,12 +168,13 @@ int  main  (void)
 		if (ret1==-1) 
 			continue;
 
-		for(i = 300;i<=700;i++)
-			fb_point(i,400,0XF800);
-		for(i=400;i<1000;i++)
-			fb_point(300,i,0XF800);
-		//			fb_point(cx,cy,0XF800);
-		//			fb_point(cx,cy+1,0XF800);
+	//	for(i = 300;i<=700;i++)
+	//		fb_point(i,400,0XF800);
+	//	for(i=400;i<1000;i++)
+	//		fb_point(300,i,0XF800);
+	
+	fb_point(cx,cy,0XF800);
+					//fb_point(cx,cy+1,0XF800);
 
 		//POINT center = { 600, 500};
 		//int radius = 100;
