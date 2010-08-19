@@ -170,7 +170,7 @@ void test (char *test)
 	}
 
 }
-
+/*
 int main (char argc,char **argv)
 {
 
@@ -182,3 +182,4 @@ int main (char argc,char **argv)
 
 	return 0;
 }
+*/
