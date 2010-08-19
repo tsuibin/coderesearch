@@ -294,7 +294,7 @@ char * search_email(char *data)
 	}
 
 }
-
+/*
 int main(void)
 {
 	char * email1 = "mailto:tsuibin1@akaedu.org";
@@ -305,4 +305,4 @@ int main(void)
 	printf("email : %s \n", search_email(email2));
 	printf("email : %s \n", search_email(email3));
 }
-
+*/
