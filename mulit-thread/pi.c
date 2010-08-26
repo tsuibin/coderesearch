@@ -10,7 +10,7 @@ void * process(void *arg)
 {
 	register double width,localsum;
 	register int i;
-	register iproc = (*((char *) arg) - '0');
+	register int iproc = (*((char *) arg) - '0');
 
 	width = 1.0;
 
@@ -25,7 +25,7 @@ void * process(void *arg)
 	localsum *= width;
 
 	pthread_mutex_lock(&pi_lock);
-	pi += localsum;
+	pi += localsum;	
 	pthread_mutex_unlock(&pi_lock);
 
 	return(NULL);
@@ -41,12 +41,12 @@ int main(int argc, char **argv)
 	pthread_mutex_init(&pi_lock, NULL);
 
 	pthread_create(&thread0, NULL, process, "0");
-	pthread_create(&thread1, NULL, process, "1");
+	//pthread_create(&thread1, NULL, process, "1");
 
-	pthread_join(thread0, &retval);
-	pthread_join(thread1, &retval);
+	//pthread_join(thread0, &retval);
+	//pthread_join(thread1, &retval);
 
-	printf("Extimation of PI is %20.18f\n",pi);
+	printf("Estimation of PI is %20.18f\n",pi);
 
 	return 0;
 }
