@@ -1,0 +1,1 @@
+cmd_/home/akaedu/coderesearch/yszb/mod.ko := /usr/local/yszb-arm/4.4.1/bin/arm-none-linux-gnueabi-ld -EL -r   -o /home/akaedu/coderesearch/yszb/mod.ko /home/akaedu/coderesearch/yszb/mod.o /home/akaedu/coderesearch/yszb/mod.mod.o
