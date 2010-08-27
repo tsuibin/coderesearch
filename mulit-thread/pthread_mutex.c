@@ -16,7 +16,7 @@ void * process(void *arg)
 int main(int argc, char **argv)
 {
 	pthread_t thread0, thread1;
-	pthread_mutex_init(&pi_lock, NULL);
+	pthread_mutex_init(&thread_lock, NULL);
 	
 	for (;;)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 		pthread_create(&thread1, NULL, process, "1");
 	}
 	
-	pthread_mutex_destroy(&thread_lock)
+	pthread_mutex_destroy(&thread_lock);
 	
 	return 0;
 }
