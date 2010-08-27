@@ -1,5 +1,9 @@
 #include "five.h"
-
+/*
+* 初始化fb设备文件
+* 注意需要把分辨率设置为1024*768 
+* 不然话出来的东西可能不一样
+*/
 short * init_fb (int fp)
 {
 	short * fbp;

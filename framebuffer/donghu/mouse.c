@@ -2,6 +2,10 @@
 
 static int fd;
 static  char color_hidbymouse[MW * 2 + 1][MW * 2 + 1];
+
+/*
+*初始化鼠标设备
+*/
 void init_mouse (void)
 {
 	fd = open ("/dev/input/mice", O_RDONLY);
@@ -14,6 +18,10 @@ void init_mouse (void)
 	}
 }
 
+/*
+* 获取鼠标坐标
+* 并对越界进行限制
+*/
 int get_mouse_position (void)
 {
 	//unsigned char buf[8];
@@ -77,6 +85,9 @@ void close_mouse (void)
 	close (fd);
 }
 	
+/*
+* draw the mouse
+*/
 void show_mouse (void)
 {
 	int i, j, k, l;
