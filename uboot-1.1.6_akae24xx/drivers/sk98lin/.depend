@@ -1,0 +1,73 @@
+skge.o: skge.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skaddr.o: skaddr.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skgehwt.o: skgehwt.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skgeinit.o: skgeinit.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skgepnmi.o: skgepnmi.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skgesirq.o: skgesirq.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+ski2c.o: ski2c.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+sklm80.o: sklm80.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skqueue.o: skqueue.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skrlmt.o: skrlmt.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+sktimer.o: sktimer.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skvpd.o: skvpd.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skxmac2.o: skxmac2.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+skcsum.o: skcsum.c /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+uboot_skb.o: uboot_skb.c \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h
+uboot_drv.o: uboot_drv.c \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/common.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/configs/akae2440.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/cmd_confdefs.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/linux/bitops.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/bitops.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/linux/types.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/linux/config.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/linux/posix_types.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/linux/stddef.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/posix_types.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/types.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/linux/string.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/string.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/ptrace.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/proc/ptrace.h \
+  /home/akaedu/de-2440/buildtool/arm-2008q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/part.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/ide.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/flash.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/image.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/u-boot.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/global_data.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/mach-types.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/setup.h \
+  /home/akaedu/uboot-1.1.6_akae24xx/include/asm/u-boot-arm.h

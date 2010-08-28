@@ -1,7 +1,11 @@
 #include "five.h"
 
 static int fd;
+/*
 static  char color_hidbymouse[MW * 2 + 1][MW * 2 + 1];
+保存颜色信息的数组有两字节，应该使用short类型数组
+*/
+static short color_hidbymouse[MW * 2 + 1][MW * 2 + 1];
 
 /*
 *初始化鼠标设备
@@ -41,7 +45,7 @@ int get_mouse_position (void)
 	mx += dx;
 	my += dy;
 
-	/*for (i = mx1 - MW, k = 0; i <= mx1 + MW; i++, k++)
+	for (i = mx1 - MW, k = 0; i <= mx1 + MW; i++, k++)
 	{
 		for (j = my1 - MW, l = 0; j <= my1 + MW; j++, l++)
 		{
@@ -51,7 +55,7 @@ int get_mouse_position (void)
 				*(fbp + location) = color_hidbymouse[k][l];
 			}
 		}
-	}*/
+	}
 
 	if (mx < 0)
 	{

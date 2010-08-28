@@ -1,0 +1,13 @@
+
+--此行及以下内容将会被忽略--
+
+M    cpu/arm920t/config.mk
+M    lib_arm/div0.c
+M    lib_arm/Makefile
+M    Makefile
+M    include/configs/akae2440.h
+M    include/configs/akae2410.h
+M    board/akae2440/config.mk
+M    board/akae2440/lowlevel_foo
+M    board/akae2440/Makefile
+M    common/cmd_myboot.c

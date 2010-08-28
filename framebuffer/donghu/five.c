@@ -18,12 +18,12 @@ int main (void)
 	my = vinfo.yres / 2;
 	//printf ("mx = %d my = %d\n", mx, my);
 	init_mouse ();
+	//draw_background ();
+	//draw_chessboard ();
 	show_mouse ();
 	while (1)
 	{
 		get_mouse_position ();
-		draw_background ();
-		draw_chessboard ();
 		//printf ("mx = %d my = %d\n", mx, my);
 		show_mouse ();
 		
