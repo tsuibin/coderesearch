@@ -11,6 +11,7 @@ int main (void)
 {
 	int fp = 0;
 	
+	//printf ("%d\n", vinfo.);
 	fbp = init_fb (fp);
 	draw_background ();
 	draw_chessboard ();
