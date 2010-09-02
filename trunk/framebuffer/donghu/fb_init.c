@@ -26,7 +26,9 @@ short * init_fb (int fp)
 		printf ("Error reading variable information\n");
 		exit (3);
 	}
-
+	printf ("%d\n", vinfo.xres);
+	printf ("%d\n", vinfo.yres);
+	printf ("%d\n", vinfo.bits_per_pixel);
 	screensize = vinfo.xres * vinfo.yres * vinfo.bits_per_pixel / 8;
 	fbp = (short *) mmap (0, screensize, PROT_READ | PROT_WRITE, MAP_SHARED, fp, 0);
 
