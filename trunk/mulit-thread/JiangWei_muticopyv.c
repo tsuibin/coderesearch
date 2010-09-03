@@ -83,17 +83,19 @@ void * tcopy(void *arg)
 		size = fi->size - fi->size/2;
 	}
 	fps = fopen(fi->src_file,"r");
-	fpd = fopen(fi->dst_file,"w");
+	fpd = fopen(fi->dst_file,"a");
 	buf = (char *)malloc(size);
 	printf("size = %d, offset = %d\n",size,offset);
 
 	if (fseek(fps,offset,SEEK_SET) < 0)
 		perror("fseek");
-	fread(buf,size/2,2,fps);		
+	//fread(buf,size/2,2,fps);		
+	fread(buf,size,1,fps);		
 
 	if (fseek(fpd,offset,SEEK_SET) < 0)	
 		perror("fseek");
-	fwrite(buf,size/2,2,fpd);
+	//fwrite(buf,size/2,2,fpd);
+	fwrite(buf,size,1,fpd);
 
 	
 	//automic_read(fps,(void *)buf,size,offset);
