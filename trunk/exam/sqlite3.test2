@@ -1,0 +1,26 @@
+测试内容
+student 表结构{
+	id integer
+	name text
+	age integer
+}
+class 表结构
+{
+	sid integer
+	class integer
+}
+写出SQL语句:
+1修改自己的学号为18
+2查询年龄大于18岁的所有学生记录
+3查询姓名为 LXX(XX为任意字符) 的所有学生记录
+4删除一条记录
+5写一个包含 order by 用法的SQL语句
+6在student表中 插入一条学生数据
+7写出三个 SQLITE3 C语言API 函数名
+
+
+附加题
+给一张表增加一个班级的字段
+构建一条sql语句查询出 学生姓名 年龄 班级
+
+
