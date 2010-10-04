@@ -117,7 +117,7 @@ void show_massage()
 	printf("[1] insert a student information\n"); 
 	printf("[2] delete a student information\n"); 
 	printf("[3] update a student information\n"); 
-	printf("[3] show student information\n");
+	printf("[4] show student information\n");
 	printf("please input a number [1-4]:\n");
 	i = fgetc(stdin);
 	while( !(i > 48 && i < 53) )

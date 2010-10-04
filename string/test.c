@@ -1,12 +1,15 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 
+char sss[ ] = "helloworld!";
 
 int main(int argc , char *argv[]) 
 {
-	//char abc[ ] = "0";
-	char abc[ ] = "0";
+	char *p;
+	char world[ ] = "helloworld!";
 
-	printf("%s\n",abc);
+	printf(" world address %x \n",world); 
+	printf(" sss address %x \n",sss); 
+	
 	return 0;
 }
