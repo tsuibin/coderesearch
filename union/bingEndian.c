@@ -10,6 +10,7 @@ int test_endian(void)
 {
 	union node u;
 	u.a = 0x12345678;
+	//u.a = 0x12345699;
 	if (u.b == 0x78)
 	{
 		printf("little endian\n"); 

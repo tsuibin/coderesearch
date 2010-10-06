@@ -4,7 +4,7 @@
 struct node {
 	int value;		//data stored in the node
 	struct node *next;	//pointer to the next node
-	struct node *prev;
+	struct node *prev;	//pointer to the previous node
 };
 
 struct node * create_node(void)
@@ -22,6 +22,7 @@ struct node * create_node(void)
 
 	return new_node;
 }
+
 struct node * add_to_node(struct node *list,int value)
 {
 	struct node *new_node;
