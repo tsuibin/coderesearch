@@ -20,7 +20,7 @@ int chessboard_line_color = 0xffff00;          // 棋盘线的颜色
 
 int array_chess[chess_line_num][chess_line_num];
 int start = 1;                   //  1 表示红方先走，0表示蓝方先走
-int PLAYER_NUM = 2;               //当PLAYER_NUM = 1时为人机对战模式(aka522 vs human)，当PALYER_NUM =2时为机机对战模式(aka522 vs mxcai2010) 其他情况尚未定义
+int PLAYER_NUM = 1;               //当PLAYER_NUM = 1时为人机对战模式(aka522 vs human)，当PALYER_NUM =2时为机机对战模式(aka522 vs mxcai2010) 其他情况尚未定义
 
 
 /*

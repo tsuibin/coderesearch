@@ -1,0 +1,46 @@
+#include  "common.h"
+#include "mouse.h"
+
+
+/*
+ *函数功能：人下棋，画出符合条件位置的棋子，标上数字 
+ *
+ */
+
+
+ 
+int hum_chess (void) //   人下棋，画出棋子，并判断棋子的是否成五
+{
+	rand(time(NULL));    
+	if (find_five (2));
+	else if (find_five (1));
+	else if(compare_four());
+	else if (compare_three());
+	else if (find_two (1));
+	else if (find_two (2));
+	else
+		do
+		{
+			array_x = array_x + rand () % 5+8;
+			array_y = array_y + rand () % 5+8;
+			if (array_x > 20 || array_y >20)
+			{
+				array_x = array_x %10;
+				array_y = array_y %10;
+			}
+		}while (array_chess[array_x][array_y] != 0);
+
+                        chess_num++;
+
+                array_chess[array_x][array_y]=1;
+
+                midpointcircle (array_x * chess_gap + chessboard_init_x,
+                                array_y * chess_gap + chessboard_init_y, circle_r,chess_one_color);
+                
+			draw_chess_num(array_x ,array_y,0x0);	
+//				画棋子上的数字
+						
+								if(search_side_maxnum(array_x,array_y,1) +1 >=5)  //棋子下后， 是否成五
+												return 100;
+												return 0;
+}
