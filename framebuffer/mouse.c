@@ -50,8 +50,6 @@ int	init_fb (void)
 
 	cx = w/2;
 	cy = h/2;
-//	cx = w;
-//	cy = h;
 
 
 	return 0;
@@ -63,7 +61,8 @@ void fb_point (int x,int y,short color)
 {
 //	printf("%d\n",color); 
 	//fb_mem[y*w+x]=color;
-	int i = 1680*1050;
+	//int i = 1680*1050;
+	int i = 1024*768;
 	for (;i > 0;i--)
 	{
 		fb_mem[i]=color;
