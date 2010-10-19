@@ -1,8 +1,16 @@
+/*
+	用于搜索指定目录下的文件
+*/
+
 #include <stdio.h>
 #include <dirent.h>
 #include <stdlib.h>
 #include "common.h"
 #include <string.h>
+
+#ifndef DIR_PATH
+#define DIR_PATH "./jpegs"
+#endif
 
 	
 Link_img ins_img( char * img_name,Link_img tmp)
@@ -37,8 +45,8 @@ void search_img()
 	
 	l_img_head = l_img;
 
-
-    dir=opendir("./jpegs");
+	if (!sizeof(DIR_PATH)) return ;
+    dir=opendir( DIR_PATH );
 	img_tmp = l_img;
 
     while((ptr=readdir(dir))!=NULL)

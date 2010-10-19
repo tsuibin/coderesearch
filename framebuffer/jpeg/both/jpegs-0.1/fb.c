@@ -1,3 +1,7 @@
+/*
+	用于读取framebuffer信息
+*/
+
 #include "common.h"
 #include <linux/fb.h> //FBIOGET_VSCREENINFO
 #include <sys/mman.h>
