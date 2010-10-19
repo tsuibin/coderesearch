@@ -7,13 +7,13 @@ int main(int argc,char* argv[])
 	for(i = 0;i < 99999999;i++)
 	{
 		int *p;
-		if ( ( p = malloc( sizeof( int ) ) ) == NULL )
+		if ( ( p = malloc( sizeof( int )*1024 ) ) == NULL )
 		{
-			printf("malloc false!\n");
+			printf("%d malloc false!\n",i);
 		}
 	}
-
-
+	
+	printf("ok\n"); 
 
 	return 0;
 }
