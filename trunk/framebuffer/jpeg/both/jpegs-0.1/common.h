@@ -1,6 +1,11 @@
 #ifndef __common_h__
 #define __common_h__
 
+/*
+   全局变量声明 回调函数类型定义
+ */
+
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -21,7 +26,7 @@ typedef struct link_img{
 	struct link_img * next;
 } * Link_img;
 
-	Link_img l_img, img_tmp ,l_img_head;
+Link_img l_img, img_tmp ,l_img_head;
 
 
 #endif
