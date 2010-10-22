@@ -24,7 +24,7 @@ main( int argc, char *argv[] )
 
     bzero( &pin, sizeof( pin ) );
     pin.sin_family = AF_INET;
-    inet_pton( AF_INET, "127.0.0.1", &pin.sin_addr );
+    inet_pton( AF_INET, "127.0.0.1", &pin.sin_addr );//转换文本地址为网络二进制码
     pin.sin_port = htons( port );
 
     sock_fd = socket( AF_INET, SOCK_STREAM, 0 );
