@@ -13,7 +13,6 @@ public:
 int main(int argc, char *argv[])
 {
 	A first;
-
 	cout << first.t << endl;
 	const_cast<int&>(first.t) = 200;
 	
