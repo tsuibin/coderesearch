@@ -2,10 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h> 
 #include <sys/file.h>
+#include <string.h> 
 
-void locker(void)
+void locker(char *name)
 {
-	const char filename[]  = "/tmp/a6show";
+	char filename[20];
+	strcpy(filename,"/tmp/");
+	strcat(filename,name);
+
 	int fd = open (filename, O_CREAT|O_WRONLY, 0644);
 	int lock =  lockf(fd,F_TLOCK,0);
 	if (fd == -1) {
@@ -23,7 +27,7 @@ void locker(void)
 
 int main(int argc, char *argv[])
 {
-	locker();
+	locker(argv[0]);
 	while(1);
 	return 0;
 }

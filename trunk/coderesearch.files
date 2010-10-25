@@ -383,6 +383,7 @@ socket/ipv6.c
 socket/ipv6_client1.c
 socket/ipv6_server1.c
 socket/server1.c
+socket/chen_svr.c
 sqlite/shell.c
 sqlite/sqlite3.c
 sqlite/sqlite3.h
