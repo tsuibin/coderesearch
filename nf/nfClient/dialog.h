@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QString>
+#include <QTimer>
 
 namespace Ui {
     class Dialog;
@@ -22,6 +23,7 @@ private:
 	qint64 blockNumber;
 	qint64 maxBytes;
 	bool cleanQuit;
+        QTimer *m_timer;
 
 private slots:
 	void on_pushButtonQuit_clicked();

@@ -11,13 +11,13 @@
 #include <QByteArray>
 #include <QString>
 #include <QChar>
-#include "tcpthread.h"
 
 #include "qcameradevice.h"
 
 QCameraDevice::QCameraDevice(QObject *parent) : QObject(parent)
 {
     m_capture = new cv::VideoCapture;
+
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
 }
@@ -37,7 +37,7 @@ bool QCameraDevice::start()
     }
     m_capture->open(CV_CAP_ANY);
     if (m_capture->isOpened()) {
-        m_timer->start(20);
+        m_timer->start(1000);
     }
     return m_capture->isOpened();
 }

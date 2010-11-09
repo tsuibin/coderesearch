@@ -5,6 +5,7 @@
 #include <QHostAddress>
 #include <QMessageBox>
 
+
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
@@ -16,6 +17,10 @@ Dialog::Dialog(QWidget *parent) :
     ui->setupUi(this);
 	ui->progressBar->setRange(0, 1000);
 	ui->progressBar->setValue(0);
+
+        this->m_timer = new QTimer(this);
+             connect(this->m_timer, SIGNAL(timeout()), this, SLOT(on_pushButtonSend_clicked()));
+             this->m_timer->start(400);
 }
 
 Dialog::~Dialog()

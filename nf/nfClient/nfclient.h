@@ -4,6 +4,11 @@
 #include <QAbstractSocket>
 #include <QTcpSocket>
 
+//QImage
+#include <QImage>
+#include <QBuffer>
+#include <QFile>
+
 class nfClient : public QTcpSocket//QAbstractSocket
 {
     Q_OBJECT
@@ -25,6 +30,7 @@ public slots:
 
 private:
 	QString filePath;
+
 
 };
 

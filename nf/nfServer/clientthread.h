@@ -10,6 +10,7 @@
 #include <QFile>
 #include <QString>
 
+
 class clientThread : public QThread
 {
     Q_OBJECT
@@ -17,11 +18,13 @@ public:
 	explicit clientThread(int h, QObject *parent = 0);
 	void proccessData(QByteArray& array);
 
+
 protected:
 	void run();
 
 signals:
 	void error(int);
+        //void finished();
 
 public slots:
 	void on_socket_readyRead();

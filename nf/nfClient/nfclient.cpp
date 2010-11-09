@@ -1,8 +1,8 @@
 #include "nfclient.h"
 #include <QByteArray>
 #include <QDataStream>
-#include <QFile>
 #include <QHostAddress>
+
 
 nfClient::nfClient(QObject *parent)
 	: QTcpSocket(parent)//QAbstractSocket(QAbstractSocket::TcpSocket, parent)
@@ -10,6 +10,10 @@ nfClient::nfClient(QObject *parent)
 	connect(this, SIGNAL(connected()), this, SLOT(on_connected()));
 	connect(this, SIGNAL(error(QAbstractSocket::SocketError)),
 			this, SLOT(displaySocketError(QAbstractSocket::SocketError)));
+
+
+        //image
+
 }
 
 void nfClient::sendFile(const QString &file, const QHostAddress &dest)
@@ -33,15 +37,35 @@ void nfClient::on_connected()
 {
     //链接成功执行
 	qDebug() << "Connected";
-	QFile file(filePath);
+
+//文件QImage 2010 11 2
+//        QImage image;
+//        image.load("timage.png");
+//        image.save("/tmp/timage.png","PNG");
+
+        QFile file;
+//
+        filePath = "/tmp/timage.png"; //image
+        file.setFileName(filePath);
+//        file.open(QIODevice::ReadWrite);
+
+//        if (!image.save(&file,"PNG")) return;
+
+
+
+//文件QImage 2010 11 2
+
         if(!file.open(QIODevice::ReadOnly))//如果文件打开失败
-	{
-		emit onError(2);
+        {
+                emit onError(2);
                 disconnectFromHost(); //返回错误信息，断开服务器链接
-		return;
-	}
-	else
+                return;
+        }
+        else
+        {
                 emit fileSize(file.size());//否则发送文件大小信号,用于设置最大字节数和调整进度条范围
+        }
+        //emit fileSize(file.size());
 
 	emit message(tr(" Start send!"));
 	QString fileName = file.fileName();

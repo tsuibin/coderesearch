@@ -15,10 +15,14 @@ unix:LIBS += -lcv \
 SOURCES += main.cpp\
         dialog.cpp \
     qcameradevice.cpp \
-    tcpthread.cpp
+    serverthread.cpp \
+    userthread.cpp \
+    videocollector.cpp
 
 HEADERS  += dialog.h \
     qcameradevice.h \
-    tcpthread.h
+    serverthread.h \
+    userthread.h \
+    videocollector.h
 
 FORMS    += dialog.ui
