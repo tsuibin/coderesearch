@@ -4,9 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core network
+QT       += core gui network
 
-QT       -= gui
+#QT       += gui
 
 TARGET = nfServer
 CONFIG   += console

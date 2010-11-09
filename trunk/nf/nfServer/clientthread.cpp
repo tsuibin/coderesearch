@@ -17,6 +17,10 @@ clientThread::clientThread(int h, QObject *parent) :
         connect(&s, SIGNAL(readyRead()), this, SLOT(on_socket_readyRead()));//当数据可读的时候
 	connect(&s, SIGNAL(error(QAbstractSocket::SocketError)),
 			this, SLOT(displaySocketError(QAbstractSocket::SocketError)));
+
+
+
+
 }
 
 void clientThread::proccessData(QByteArray &array)//8个字节
@@ -55,7 +59,9 @@ void clientThread::proccessData(QByteArray &array)//8个字节
 		qDebug() << "File transt finished.";
 		file.close();
                 s.disconnectFromHost();//断开链接
-		//emit finished();
+
+
+                //emit finished();
 		break;
 	default: ;
 	}

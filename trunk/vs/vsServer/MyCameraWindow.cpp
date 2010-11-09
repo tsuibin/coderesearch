@@ -16,12 +16,12 @@ MyCameraWindow::MyCameraWindow(CvCapture *cam, QWidget *parent) : QWidget(parent
 
     connect(pushButton,SIGNAL(clicked()),this,SLOT(saveCapture()));
 
-    startTimer(100);  // 0.1-second timer
+    startTimer(500);  // 0.1-second timer
  }
 
 void MyCameraWindow::timerEvent(QTimerEvent*) {
     IplImage *image=cvQueryFrame(camera);
-    cvwidget->putImage(image,0);
+    cvwidget->putImage(image,1);
 }
 
 void MyCameraWindow::saveCapture() {

@@ -2,6 +2,7 @@
 #define NFSERVER_H
 
 #include <QTcpServer>
+#include <QLabel>
 
 class nfServer : public QTcpServer
 {
@@ -14,6 +15,8 @@ public:
 
 protected:
 	void incomingConnection(int handle);
+        QLabel *lab;
+        QImage img;
 
 signals:
 
