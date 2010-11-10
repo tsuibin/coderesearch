@@ -32,6 +32,7 @@ void ImageClient::on_pushButton_2_clicked()
     QImage image("yilai.png"); // 348 229
     qDebug() << image.byteCount() << image.size();
     qint64 size = image.byteCount();
+image.numBytes()
 
     data.append((char *)image.bits(),image.byteCount());
 

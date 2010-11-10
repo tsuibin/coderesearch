@@ -76,7 +76,7 @@ void QOpenCVWidget::putImage(IplImage *cvimage,int flag) {
 //    buf.open(QIODevice::WriteOnly);
 //    image.save(&buf);
 
-   // imagelabel->setPixmap(QPixmap::fromImage(image));
+    imagelabel->setPixmap(QPixmap::fromImage(image));
 #ifdef _TEST_
     image_data.clear();
     image_data.append((const char *)image.bits(),image.byteCount());

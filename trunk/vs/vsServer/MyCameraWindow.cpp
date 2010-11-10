@@ -16,7 +16,7 @@ MyCameraWindow::MyCameraWindow(CvCapture *cam, QWidget *parent) : QWidget(parent
 
     connect(pushButton,SIGNAL(clicked()),this,SLOT(saveCapture()));
 
-    startTimer(500);  // 0.1-second timer
+    startTimer(30);  // 0.1-second timer
  }
 
 void MyCameraWindow::timerEvent(QTimerEvent*) {
