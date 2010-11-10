@@ -15,13 +15,11 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-   // Dialog w;
-   // w.show();
+    Dialog w;
+    w.show();
 //    ServerThread svr;
 //    svr.run();
-
-    VideoCollector vc;
-    vc.sendVideoFrame();
-
+//    VideoCollector vc;
+//    vc.sendVideoFrame();
     return a.exec();
 }
