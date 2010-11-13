@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h> 
-#define dp(x,y) x##y(" is y##x \n");
+#define dp(x,y)\
+x##y(" hello world \n")
 
 int main(int argc , char *argv[]) 
 {
