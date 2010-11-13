@@ -28,7 +28,7 @@ VideoCollector::VideoCollector(QObject *parent) :
 void VideoCollector::sendVideoFrame()
 {
     qDebug() << "Send Video Frame ";
-        connectToHost(QHostAddress("192.168.0.113"), 8763);
+        connectToHost(QHostAddress("127.0.0.1"), 8763);
 
 }
 
