@@ -34,7 +34,8 @@ void* sigmgr_thread()
 int main()
 { 
 	sigset_t  oset; 
-	int             i;
+	int             i, rc;
+	int        sig;
 	pid_t           pid = getpid();
 	pthread_t       ppid;
 
@@ -61,11 +62,19 @@ int main()
 	kill(pid, SIGUSR1);
 	kill(pid, SIGUSR1);
 
+	while (1)  {
+		rc = sigwait(&bset, &sig);/*对不再指定信号集中的信号会继续等待*/
+		if (rc != -1) {
+			printf("sig is : %d \n", sig);
+		} else {
+			printf("sigwaitinfo() returned err: %d; %s\n", errno, (char *)strerror(errno));
+		}
+	}
 	// Create the dedicated thread sigmgr_thread() which will handle signals synchronously
-	pthread_create(&ppid, NULL, sigmgr_thread, NULL);
+//	pthread_create(&ppid, NULL, sigmgr_thread, NULL);
 
-	pthread_join(ppid,NULL);
-	//sleep(10);
+//	pthread_join(ppid,NULL);
+	sleep(10);
 
 	exit (0);
 }

@@ -20,7 +20,7 @@ void *thread(void* test)
 	//pthread_exit(0);	
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
 	pthread_t id;
 	int i,ret;
