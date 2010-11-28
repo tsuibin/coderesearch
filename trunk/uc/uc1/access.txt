@@ -1,0 +1,32 @@
+
+
+int access(const char*path, int amode)
+
+amode: R_OK, W_OK, X_OK,F_OK
+if(!accsee("filename"),R_OK);
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+int open(const char* pathname,int flag,...);
+
+<O_RDONLY|O_WRONLY|O_RDWR> 三选一
+O_APPEND(追加) O_CREAT(如果文件不存在就新建) O_EXCL(必须创建新文件,如果那个文件存在，就会创建失败,如果多人同时创建，只会有一个人成功 ) O_TRUNC(清空文件旧内容)
+
+读到的字节数是返回值 read (fd, 内存地址, 字节数)
+
+写入的字节数是返回值 write(fd, 内存地址,字节数)
+
+	unlink("文件名");
+
+off_t lseek(int fd , off_t offset, int whence);
+
+whence
+SEEK_SET (文件头，正偏移)
+SEEK_CUR (当前位置，正负都可)
+SEEK_END (文件末尾,负偏移)
+
+空洞文件
+
+

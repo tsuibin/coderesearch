@@ -1,0 +1,59 @@
+#include <sys/types.h>
+#include <sys/wait.h>
+
+pid_t wait(int *statloc);
+pid_t waitpid(pid_t pid, int *statloc, int option);
+返回值
+子进程号，出错返回-1
+调用参数
+statloc 用于接收终止的子进程的返回状态
+option 通常设置为0
+pid 等待其进程ID与pid相等的子进程
+如果没有子进程
+wait无作用
+		如果子进程正常返回 
+if(WIFEXITED(statloc))
+		cout <<WEXITSTATUS(statloc) <<endl;
+		如果子进程异常返回
+if(WIFSIGNALED(statloc))
+		cout <<WTERMSIG(statloc)<<endl;
+
+
+		unsigned char statloc;
+
+		调试?
+		在进程空间中
+		装入新程序
+		覆盖旧程序
+		新程序重头开始执行
+		exec系列函数
+
+#include <unistd.h>
+
+extern char **environ;
+
+int execl(const char *path, const char *arg,
+						...);
+int  execlp(const  char  *file,  const  char
+				*arg, ...);
+int  execle(const  char  *path,  const  char
+				*arg,
+				..., char * const envp[]);
+int  execv(const  char  *path,  char  *const
+				argv[]);
+int execvp(const  char  *file,  char  *const
+				argv[]);
+
+int execvp("程序名",char *argv[])
+
+int main(int argc,char *argv[])
+
+
+
+凡是想一个函数传递一个指针数组的时候
+如果没有说明元素个数，那么一般使用NULL作为结束标志
+
+execvp
+v vector
+execlp ?
+execlp("程序名",参数,参数,参数...);

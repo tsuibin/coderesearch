@@ -1,0 +1,21 @@
+pa
+
+printa
+printb
+printc
+.cc
+
+每3秒钟输出一次
+a b c
+立即显示
+
+startabc.cc
+startabc 启动pa pb pc用fork和exec系列函数 把这三个程序都执行起来
+自己结束
+
+stopabc.cc
+stopabc -> 结束这三个程序
+怎么结束
+根据程序名字结束一个程序 pkill system 
+
+

@@ -8,8 +8,8 @@ static int psize;
 
 
 
-//char * fontfile = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttf";
-char * fontfile = "./mao.ttf";
+char * fontfile = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttf";
+//char * fontfile = "./mao.ttf";
 
 
 static unsigned short
