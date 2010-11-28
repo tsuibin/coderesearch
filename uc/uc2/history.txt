@@ -1,0 +1,115 @@
+第一天(11月19日)
+进程原理 线程原理 线程的练习
+pthread_create
+pthread_join
+pthread_kill
+pthread_cancel
+pthread_self
+pthread_exit
+结构体对齐
+
+
+第二天(11月20日)
+数组与结构体内存分配
+目录操作
+opendir
+readdir
+closedir
+struct dirent *
+LinkList
+
+第三天(11月21日)
+libjpeg x86 编译
+构建数码相框
+freamebuffer image
+简单的特效
+jpeg decode
+24 to 32 color
+
+第四天(11月22日)
+搭建交叉编译环境
+使用交叉编译环境
+交叉编译libjpeg
+24 to 16
+移植数码相框
+busybox
+版本控制工具 svn
+
+第五天(11月23日)
+libjpeg的移植
+数码相框移植
+
+第六天(11月24日)
+数码相框特效
+
+(11月25日 统一休息一天)
+
+第七天(11月26日)
+用户信息
+getlogin 用户名
+geteuid 有效用户id
+getuid 用户id
+getpwuid 通过id获取用户信息的结构体
+getpwnam 通过name获取用户信息的结构体
+
+读取设置系统环境变量
+getenv
+putenv
+环境变量的有效范围(当前进程和子进程有效)
+main函数第三种形式(char *env[])
+int main(int argc ,char *argv[],char *env[])
+
+文件IO
+open 打开文件 返回文件描述符
+close 关闭文件 参数是文件描述符
+read 读取文件 参数(文件安描述符，buf,个数) 返回 读取的个数 失败返回 -1
+write 写文件 参数(文件描述符号,buf,大小) 返回 写入的个数 失败返回 -1
+lseek 偏移量 参数(fd,off_set,whence)
+
+目录操作
+mkdir  创建一个目录 参数 (dirname,权限)
+rmdir 删除一个目录，参数(dirname)
+chdir 改变当前进程的工作目录(dir path)
+getcwd 获取当前目录的绝对路径
+rename 重命名 (oldname,newname)
+
+第八天(11月27日)
+多进程
+system
+fork
+exec
+
+第九天(11月28日)
+鼠标设备数据分析
+多进程与多线程的区别
+vfork
+进程间通信(进程同步与线程同步)
+
+第十天(11月29日)
+数码相框项目收尾
+文件聊天项目收尾
+
+第十一天(11月30日)
+QT编程基础
+
+第十二天(12月1日)
+C++基础
+
+第十三天(12月2日)
+C++基础
+
+第十四天(12月3日)
+C++的图像处理
+图像的网络传输
+
+第十五天(12月4日)
+网络版数码相框(QT,C++)
+
+第十六天(12月5日)
+网络版数码相框(QT,C++)
+网络版数码相框收尾
+
+
+
+
+
