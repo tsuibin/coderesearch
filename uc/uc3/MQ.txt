@@ -1,0 +1,39 @@
+
+
+　　消息队列提供了一种从一个进程向另一个进程发送一个数据块的方法。
+　　头文件：sys/types.h、sys/ipc.h、sys/msg.h
+　　消息结构定义：
+　　struct my_message{
+　　long int message_type;
+　　....
+　　}
+　　1.msgget函数
+　　int msgget(key_t key, int msgflag);
+　　key：键值。不重复即可，IPC_PRIVATE（一般不用）。
+　　msgflag：IPC_CREAT（一般）、IPC_EXCL、IPC_NOWAIT或三者的或结果。
+　　调用返回：成功返回消息队列描述字，否则返回-1。
+ 
+ 　　2.msgsnd函数
+ 　　int msgsnd(int msqid, const void *msg_ptr, int msg_sz, int msgflg);
+ 　　msqid：msgget返回的消息队列标识符。
+ 　　msg_ptr：指向准备发送消息的指针。
+ 　　msg_sz：msg_ptr指向的消息的长度。
+ 　　msgflag：在消息队列没有足够空间容纳要发送的消息时：IPC_NOWAIT指明立即返回，不发送消息并返回值为-1；若IPC_NOWAIT标志被清除，则发送进程挂起以等待队列中腾出可用空间。
+ 　　调用返回：成功返回0，否则返回-1。
+  
+  　　3.msgrcv函数
+  　　int msgrcv(int msqid, void *msg_ptr, int msg_sz, long msgtype, int msgflg);
+  　　msqid：msgget返回的消息队列标识符。
+  　　msg_ptr：指向准备接收消息的指针。
+  　　msg_sz：msg_ptr指向的消息的长度。
+  　　msgtype：请求读取的消息类型。0：队列中第一个可用消息；>0：相同消息类型的第一个消息；<0：类型等于或小于msgtype绝对值的消息。
+  　　msgflag：在消息队列没有没有相应类型的消息可以接受时：IPC_NOWAIT指明立即返回，返回值为-1；若IPC_NOWAIT标志被清除，则发送进程挂起以等待第一条相同类型的消息到达。　　
+  　　调用返回：成功返回读出消息的实际字节数，否则返回-1。
+   
+   　　4.msgctl函数
+   　　int msgctl(int msqid, int command, struct msqid_ds *buf);
+   　　msqid：msgget返回的消息队列标识符。
+   　　command：采取的动作。
+   　　IPC_STAT：该命令用来获取消息队列信息，返回的信息存贮在buf指向的msqid结构中；
+   　　IPC_SET：该命令用来设置消息队列的属性，要设置的属性存储在buf指向的msqid结构中；可设置属性包括：msg_perm.uid、msg_perm.gid、msg_perm.mode以及msg_qbytes，同时，也影响msg_ctime成员。
+   　　IPC_RMID：删除msqid标识的消息队列；

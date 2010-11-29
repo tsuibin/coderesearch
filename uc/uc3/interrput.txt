@@ -1,0 +1,50 @@
+中断
+
+系统处理突发信息
+
+SIGABRT 调用abort函数时产生此信号
+SIGALRM 超时信号(由alarm设置时钟)
+SIGCHLD 当子进程终止时调用此信号
+SIGINFO ctrl+t状态产生此信号 (用此信号终止失控程序)
+SIGINT 按中断键 Delete or Ctrl+c (用此信号终止失控程序)
+SIGIO 此信号表示一个异步IO事件
+SIGKILL 强制杀死进程信号
+SIGPIPE 当读进程终止，写入管道会产生此信号
+SIGQUIT 当用户在终端退出时，产生此信号
+SIGSTOP 作业控制信号，停止一个进程，不能被捕捉或者忽略
+SIGSTP 挂起后台进程(ctrl-z) 终端产生此信号
+SIGUSR1 用户自定义
+SIGUSR2 用户自定义
+SIGTERM terminate 终止信号 kill某个进程的时候
+
+不允许捕获 (系统保留的杀手锏)
+SIGKILL
+SIGSTOP
+
+
+man signal
+
+怎么捕获？
+怎么忽略?
+
+先登记
+登记对信号处理的函数
+用signal登记
+
+signal(信号，函数名);登记一个信号处理函数
+当收到这个信号的时候才会调用这个函数
+
+每个信号都有默认的处理函数 
+设置新函数的时候，返回旧函数的名字
+
+signal(sig,SIG_IGN) ignore
+signal(sig,SIG_DEL) 程序缺省处理
+返回值如果是SIG_ERR 表示信号登记失败
+kill -USR1
+Kill -USR2
+kill -信号名
+kill(进程id,信号);向指定进程发信号
+
+只能给自己的进程发信号
+
+raise(sig);给自己发信号 
