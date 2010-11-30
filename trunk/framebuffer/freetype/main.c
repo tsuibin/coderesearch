@@ -8,8 +8,8 @@ static int psize;
 
 
 
-char * fontfile = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttf";
-//char * fontfile = "./mao.ttf";
+//char * fontfile = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttf";
+char * fontfile = "./mao.ttf";
 
 
 static unsigned short
@@ -55,9 +55,6 @@ init_ft (void)
 	printf ( " Open file error %s \n" , fontfile);
       return 1;
     }
-
-
-
 }
 
 int display_font(char *code,int *len,int x)
@@ -65,7 +62,8 @@ int display_font(char *code,int *len,int x)
   unsigned int ucode;
   FT_UInt glyph_index;
   int row, pixel;
-short * fbmem_16 = (short *) fbmem;
+//short * fbmem_16 = (short *) fbmem;
+int * fbmem_16 = (int *) fbmem;
 
   ucode = s_font_utf8_to_unicode (code, len);
 
@@ -105,10 +103,10 @@ int
 main (int argc, char **argv)
 {
   int len;
-  char * buf = "stallman 你好!";
+  char * buf = "hello world!  你好 世界!";
   int x = 10;
 
-  psize = 32;
+  psize = 64;
   init_ft();
   init_fb();
 

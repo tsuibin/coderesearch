@@ -34,13 +34,21 @@ int read_mouse(int fd)
 	static int button = 0;
 
 	read(fd,buf,8);    // 读鼠标值到buf中
+printf("~~~~~~~~~~~~~~~~~~~~~\n"); 
+	printf("buf0 %d\n",buf[0]); 
+	printf("buf1 %d\n",buf[1]); 
+	printf("buf2 %d\n",buf[2]); 
+	printf("buf3 %d\n",buf[3]); 
+	printf("buf4 %d\n",buf[4]); 
+	printf("buf5 %d\n",buf[5]); 
+	printf("buf6 %d\n",buf[6]); 
+	printf("buf7 %d\n",buf[7]); 
 
 	mouse_dx = buf[1] - ((buf[0] & 0x10 ) ? 256 : 0);
 	mouse_dy = -buf[2] + ((buf[0] & 0x20) ? 256 : 0);
 	
 	mouse_cx += mouse_dx;   //   mouse_cx 的初始值为 屏幕宽度的一半 
 	mouse_cy += mouse_dy;  //    mouse_cy 的初始值为 屏莫高度的一半  cx ,cy 的初始值在 fb.c 的函数中
-	
 	if(mouse_cx < 0)
 		mouse_cx = 0;
 
