@@ -1,0 +1,12 @@
+1 设置环境变量 
+export AR = arm-none-linux-gnueabi-ar
+export CC=arm-none-linux-gnueabi-gcc
+
+2 配置jpeg makefile
+
+./configure --host=arm-none-linux-gnueabi --prefix=/tmp/jpeg/
+
+3 make
+
+4 make install
+

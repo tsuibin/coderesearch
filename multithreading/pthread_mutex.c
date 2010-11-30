@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	{
 		pthread_mutex_lock(&thread_lock);
 		pthread_create(&thread0, NULL, process, "0");
-		pthread_mutex_lock(&thread_lock);
+		pthread_mutex_trylock(&thread_lock);
 		pthread_create(&thread1, NULL, process, "1");
 	}
 	
