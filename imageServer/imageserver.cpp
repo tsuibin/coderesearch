@@ -48,7 +48,7 @@ void ImageServer::readData()
     if (size == data.size()){
         qDebug() <<"read over! size is " << data.size();
 
-        QImage tmpImage((uchar *)data.data(),348,229,QImage::Format_RGB32);
+        QImage tmpImage((uchar *)data.data(),300,400,QImage::Format_RGB32);
         ui->label->setPixmap(QPixmap::fromImage(tmpImage));
 
         data.clear();
