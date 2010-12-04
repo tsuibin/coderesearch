@@ -42,10 +42,13 @@ void ImageClient::on_pushButton_2_clicked()
     //(可自定义数据类型只要能保存图像长度即可,讲图像长度告知对方)
     m_clientSocket.write((char *)&size,sizeof(qint64));
 
-    size = image.width();//发送图片的宽度
-    m_clientSocket.write((char *)&size,sizeof(qint64));
-    size = image.height();//发送图片的高度
-    m_clientSocket.write((char *)&size,sizeof(qint64));
+    //发送图片的宽度
+	qint64 wid,hei;
+	wid = image.width();
+	hei = image.height();
+    m_clientSocket.write((char *)&wid,sizeof(qint64));
+    //发送图片的高度
+    m_clientSocket.write((char *)&hei,sizeof(qint64));
 
     //开始写图像的数据
     m_clientSocket.write(data);

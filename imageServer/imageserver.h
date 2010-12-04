@@ -20,9 +20,12 @@ public:
 
 private:
     Ui::ImageServer *ui;
+
+    qint64 size;
+    qint64 width;
+    qint64 height;
     QTcpServer m_tcpServer;
     QTcpSocket *m_tcpSocket;
-    qint64 size;
     QByteArray data;
 
 private slots:
