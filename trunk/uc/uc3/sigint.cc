@@ -19,11 +19,16 @@ void func(int sig){
 	}
 }
 
+void helloworld(int i)
+{
+	cout << "hello world!" <<endl;
+}
+
 int main(int argc ,char *argv[]) 
 {
 	//cout << "====1===="<<endl;
 	signal(SIGINT, func);
-	signal(SIGUSR1, func);
+	signal(SIGUSR1, helloworld);
 	signal(SIGUSR2, func);
 
 	//cout << "====2===="<<endl;
