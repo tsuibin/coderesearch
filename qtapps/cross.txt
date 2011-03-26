@@ -1,0 +1,4 @@
+ ./configure -embedded arm -xplatform qws/linux-arm-g++
+http://blog.csdn.net/MicroSky2813/archive/2010/02/01/5278096.aspx
+我静态编译Qt4.6的记录
+
