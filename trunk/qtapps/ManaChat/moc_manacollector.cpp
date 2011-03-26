@@ -1,15 +1,15 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'editablesqlmodel.h'
+** Meta object code from reading C++ file 'manacollector.h'
 **
-** Created: Mon Nov 22 09:48:05 2010
+** Created: Sun Nov 14 11:58:10 2010
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../querymodel/editablesqlmodel.h"
+#include "manacollector.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'editablesqlmodel.h' doesn't include <QObject>."
+#error "The header file 'manacollector.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
 #error "This file was generated using the moc from 4.7.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_EditableSqlModel[] = {
+static const uint qt_meta_data_ManaCollector[] = {
 
  // content:
        5,       // revision
@@ -33,35 +33,35 @@ static const uint qt_meta_data_EditableSqlModel[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_EditableSqlModel[] = {
-    "EditableSqlModel\0"
+static const char qt_meta_stringdata_ManaCollector[] = {
+    "ManaCollector\0"
 };
 
-const QMetaObject EditableSqlModel::staticMetaObject = {
-    { &QSqlQueryModel::staticMetaObject, qt_meta_stringdata_EditableSqlModel,
-      qt_meta_data_EditableSqlModel, 0 }
+const QMetaObject ManaCollector::staticMetaObject = {
+    { &QObject::staticMetaObject, qt_meta_stringdata_ManaCollector,
+      qt_meta_data_ManaCollector, 0 }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &EditableSqlModel::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &ManaCollector::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *EditableSqlModel::metaObject() const
+const QMetaObject *ManaCollector::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *EditableSqlModel::qt_metacast(const char *_clname)
+void *ManaCollector::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_EditableSqlModel))
-        return static_cast<void*>(const_cast< EditableSqlModel*>(this));
-    return QSqlQueryModel::qt_metacast(_clname);
+    if (!strcmp(_clname, qt_meta_stringdata_ManaCollector))
+        return static_cast<void*>(const_cast< ManaCollector*>(this));
+    return QObject::qt_metacast(_clname);
 }
 
-int EditableSqlModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int ManaCollector::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QSqlQueryModel::qt_metacall(_c, _id, _a);
+    _id = QObject::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;
