@@ -4,11 +4,18 @@
 
 int main(int argc , char *argv[]) 
 {
-	char * str1 = "hello";
-	char * str2 = "world!";
+	//char  * str1 = "hello";
+	char str1[] = "hello";
+	char * strp = malloc(6);
+	if ( strp == NULL)
+	{
+		printf("malloc error\n"); 
+	}
+	char * str2 = "w";
+	strcpy(strp, str1);
+	printf("%s\n",strp);
 
-	strcpy(str1,str2);
-	printf("%s\n",str1); 
+	free(strp);
 
 	return 0; 
 }

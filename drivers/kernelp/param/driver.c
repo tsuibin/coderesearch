@@ -1,7 +1,7 @@
 #include <linux/module.h>
 #include <linux/kernel.h>
 
-MODULE_AUTHOR("Tsuibin");
+MODULE_AUTHOR("");
 MODULE_DESCRIPTION("module example ");
 MODULE_LICENSE("GPL");
 
