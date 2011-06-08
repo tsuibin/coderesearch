@@ -39,17 +39,7 @@ struct node * add_to_node(struct node *list,int value)
 
 		new_node->value = value;// Data
 		new_node->next = list;  //
-		/*
-		   new_node->prev = list;
-		   if (list->next != NULL)
-		   {
-
-		   new_node->next = list->next;
-		   new_node->prev = list;
-		   list->next->prev = new_node;
-		   }
-		 */
-		new_node->prev = NULL;
+		
 		list->prev = new_node;
 
 		return new_node;
@@ -89,7 +79,7 @@ void show( struct node * list)
 		while(ptr->next != NULL)
 		{
 				printf("data:%d\n",ptr->value); 
-				ptr = list->next;
+				ptr = ptr->next;
 		}
 }
 
@@ -132,20 +122,13 @@ int main(int argc,char* argv[])
 
 		first = delete_node(first);
 
-		p = first;
-		while( p != NULL )
-		{
-				printf("%d,",p->value);
-				p = p->next;
-		}
+		
+		show(first);
+		
 		printf("\b\n");
+		
+		show(last);
 
-		p = last;
-		while( p != NULL )
-		{
-				printf("%d,",p->value);
-				p = p->prev;
-		}
 		printf("\b\n");
 
 		return 0;

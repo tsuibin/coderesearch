@@ -8,8 +8,8 @@ static int psize;
 
 
 
-//char * fontfile = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttf";
-char * fontfile = "./mao.ttf";
+char * fontfile = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc";
+//char * fontfile = "./mao.ttf";
 
 
 static unsigned short
@@ -103,7 +103,7 @@ int
 main (int argc, char **argv)
 {
   int len;
-  char * buf = "hello world!  你好 世界!";
+  char * buf = " helloword大家好\n";
   int x = 10;
 
   psize = 64;
@@ -114,7 +114,8 @@ main (int argc, char **argv)
  	{	
 		display_font(buf,&len,x);
 		buf += len;
-		x += 32;
+		//x += 32;
+		x += psize;
 	}
 
 }

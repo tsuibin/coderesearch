@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status (libjpeg) 8.0.2
@@ -64,9 +64,9 @@ pic_mode=default
 fast_install=yes
 
 # The host system.
-host_alias=arm-linux-gnueabi
-host=arm-unknown-linux-gnueabi
-host_os=linux-gnueabi
+host_alias=
+host=i686-pc-linux-gnu
+host_os=linux-gnu
 
 # The build system.
 build_alias=
@@ -89,7 +89,7 @@ EGREP="/bin/grep -E"
 FGREP="/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/usr/bin/arm-linux-gnueabi-nm -B"
+NM="/usr/bin/nm -B"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -123,19 +123,19 @@ deplibs_check_method="pass_all"
 file_magic_cmd="\$MAGIC_CMD"
 
 # The archiver.
-AR="arm-linux-gnueabi-ar"
+AR="ar"
 AR_FLAGS="cru"
 
 # A symbol stripping program.
-STRIP="arm-linux-gnueabi-strip"
+STRIP="strip"
 
 # Commands used to install an old-style archive.
-RANLIB="arm-linux-gnueabi-ranlib"
+RANLIB="ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$oldlib"
 old_postuninstall_cmds=""
 
 # A C compiler.
-LTCC="arm-linux-gnueabi-gcc -std=gnu99"
+LTCC="gcc -std=gnu99"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -156,7 +156,7 @@ global_symbol_to_c_name_address_lib_prefix="sed -n -e 's/^: \\([^ ]*\\) \$/  {\\
 objdir=.libs
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/bash"
+SHELL="/bin/sh"
 
 # An echo program that does not interpret backslashes.
 ECHO="echo"
@@ -240,7 +240,7 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/usr/lib/gcc/arm-linux-gnueabi/4.4.5 /usr/arm-linux-gnueabi/lib"
+sys_lib_search_path_spec="/usr/lib/gcc/i686-linux-gnu/4.4.5 /usr/lib /lib /usr/lib/i686-linux-gnu"
 
 # Run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/mesa /usr/lib/atlas /lib/i486-linux-gnu /usr/lib/i486-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/lib/alsa-lib /usr/local/lib "
@@ -255,18 +255,18 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="arm-linux-gnueabi-strip --strip-debug"
-striplib="arm-linux-gnueabi-strip --strip-unneeded"
+old_striplib="strip --strip-debug"
+striplib="strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/usr/arm-linux-gnueabi/bin/ld"
+LD="/usr/bin/ld"
 
 # Commands used to build an old-style archive.
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$oldlib"
 
 # A language specific compiler.
-CC="arm-linux-gnueabi-gcc -std=gnu99"
+CC="gcc -std=gnu99"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

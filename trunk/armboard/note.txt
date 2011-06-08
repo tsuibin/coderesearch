@@ -1,0 +1,38 @@
+arm内核有哪些构成 arm内核就是芯片
+arm920t
+处理核心 ,mmu, data mmu.cache, AMBA bus总线, process计算逻辑单元
+
+cache 高速缓存 用来存储一种子系统 介于处理器内核(300MHz)  指令 数据data sram sdram(100MHz)
+处理器看cache里面有没有 有就直接用 没有就从内存里面读 取来之后放cache里面
+
+amba :高速 ahb apb (外设总线) Peripherals
+
+perripherals: timer urat nic clock dma直接存储访问 beer
+
+SOC:
+system on chip
+
+pin：引脚
+
+mmu: 告诉你虚地址 mmu管理内存 连续 权限 
+static 修饰变量 也可以修饰函数 外部全局变量 局部变量加上static 改变了生存期 改变了变量的存储布局
+影响了存储 影响了存储期 
+不加在栈里 栈在高地址
+
+static 函数: 改变了作用域 1用法 2存储布局 3符号表/编译/链接
+
+存储布局
+高地址
+ 栈(3G 地址)
+ BSS
+
+堆 heep (很大的空间):malloc 动态内存分配
+
+
+
+
+
+底地址: 代码段
+
+只要static修饰的都在静态存储区
+什么情况下 static修饰的不在镜台存储区 （没有赋初值的数据都在bss段）在bss段

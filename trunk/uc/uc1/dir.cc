@@ -10,39 +10,36 @@ using namespace std;
 
 int main(int argc ,char *argv[]) 
 {
-		char * dir =NULL;
+		char * dir = NULL;
 
-		if(argc ==1)
+		if(argc == 1) {
 				dir = (char *) ".";
-		else
+		}else{
 				dir = argv[1];
-		DIR* p=opendir(dir);
-		if(p==NULL){
+		}
+		DIR* p = opendir(dir);
+		if(p == NULL) {
 				cout << "not direntory of not exist" << endl;
 		}
-		struct dirent* pd=NULL;
+		struct dirent* pd = NULL;
 		list<string> ls;
 		while( (pd = readdir(p)) != NULL){
 				if(pd->d_name[0] == '.') continue;
 				//cout << pd->d_name << endl;
 				ls.push_back(pd->d_name);
-				//string path= dir;
-				// path += "/";
-				//path += pd->d_name;
-				//ifstream fin(pd->d_name);
 		}
 		closedir(p);
 		ls.sort();
 		
 		list<string>::iterator it;
 		it = ls.begin();
-		while(it!=ls.end())
+		while(it != ls.end())
 		{
 			cout << *it++ <<endl;
 		}
 
 		//copy(ls.begin(),ls.end(),ostream_iterator<string>(cout,"\n"));
 
-		return 0; 
+		return 0;
 
 }

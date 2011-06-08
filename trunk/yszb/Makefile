@@ -4,8 +4,8 @@ obj-m  := mod.o
 else
 
 
-#KERNELSRC :=/lib/modules/`(uname -r)`/build
-KERNELSRC :=/home/akaedu/yszb/akaedu/linux-2.6.28.6
+KERNELSRC :=/lib/modules/`(uname -r)`/build
+#KERNELSRC :=/home/akaedu/yszb/akaedu/linux-2.6.28.6
 
 
 modules :  

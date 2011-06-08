@@ -1,0 +1,87 @@
+Linux
+{
+	操作系统基础;
+	Shell;
+}
+
+Bash Programming
+{
+	高级脚本编程;
+}
+
+Linux C/C++
+{
+	软件工程;
+	项目管理;
+}
+
+Design Pattern
+{
+	创建型模型;
+	结构型模型;
+	行为模型;
+}
+
+Linux Advanced Programming
+{
+	文件IO;
+	网络;
+	目录操作;
+	信号;
+	管道;
+	消息队列;
+	多进程;
+	多线程;	
+}
+
+Database
+{
+		SQLITE
+		{
+			基础语法;
+			SQLITE API;	
+		}
+		MySQL
+		{
+				事务;
+				存储过程;
+				触发器;
+		}
+}
+
+
+GUI Programmig
+{
+	图形化界面编程;
+}
+
+Search Engine
+{
+	HTTP协议;
+	XHTML规范;
+	URL搜索;
+	数据库设计;
+	数据分析;
+	网页评分;
+}
+
+
+
+Cross Platform
+{
+	交叉编译;
+	ARM
+	{
+		s3c2440;
+		s3c6410;
+	}
+	MIPS
+	{
+		longson;
+		RMI;
+	}
+	bootloader;
+	内核;
+	根文件系统;
+	移植;
+}
