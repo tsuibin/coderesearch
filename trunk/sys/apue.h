@@ -1,7 +1,7 @@
 /*
    <<Advanced Programming in the UNIX Environment>>
-   Download from www.topsvr.com
-   Upload By am.xv@qq.com
+   Download from www.cazool.com
+   Upload By tsuibin@akaedu.org
  */
 #ifndef _APUE_H
 #define _APUE_H
