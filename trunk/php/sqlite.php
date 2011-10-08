@@ -1,7 +1,6 @@
 <?php
 	$db = sqlite_open('phpbb');
-	if($db)
-	{
+	if($db){
 		//$rs = sqlite_query($db, 'select * from t1');
 		
 		//$arr = sqlite_fetch_array($rs,SQLITE_ASSOC);
